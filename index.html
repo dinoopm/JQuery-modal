@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<head>
+	<meta charset="utf-8">
+	<title>Modal Window</title>
+	<meta name="viewport" content="width=device-width">
+	<link rel="stylesheet" href="css/jquery.modal.css">
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script> 
+	<script src="js/jquery.modal.js"></script> 
+	<script>
+ $(function(){
+	$('#modal').click(function(e){
+		e.preventDefault();
+		$('#dialog').showModal();
+	});
+	$('.close').click(function(e){
+		e.preventDefault();
+		$('#dialog').closeModal();
+	});
+	 
+ });
+
+</script>
+	
+</head>
+<body>
+
+ <h1>Simple Modal Window Demo</h1>
+
+	<a href="#dialog" id="modal" name="modal">Click Here to Open Modal</a>
+	<div id="dialog" class="modal">
+		<h2><strong>Simple Modal Window</strong><h2>
+		<a href="#" class="close">Close Me</a>
+	</div>
+</body>
+</html>
